@@ -1,0 +1,110 @@
+.App {
+
+    @include PortraitTablet {
+        .header-component {
+            height: 200px;
+
+            .header {
+                height: 160px;
+
+                .logo-icon {
+                    width: 125px;
+                }
+
+                .score-component {
+                    padding: 20px 20px;
+
+                    .score {
+                        font-size: 1.5rem;
+                    }
+
+                    .score-counter {
+                        font-size: 2.1rem
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    @include WideTablet {
+        .header-component {
+            height: 100px;
+
+            .header {
+                height: 85px;
+
+                .logo-icon {
+                    width: 65px;
+                }
+
+                .score-component {
+                    padding: 8px 10px;
+
+                    .score {
+                        font-size: 0.8rem;
+                    }
+
+                    .score-counter {
+                        font-size: 1rem
+                    }
+                }
+            }
+        }
+    }
+
+    @include BigTablet {
+        .header-component {
+            height: 150px;
+
+            .header {
+                height: 110px;
+
+                .logo-icon {
+                    width: 80px;
+                }
+
+                .score-component {
+                    padding: 12px 17px;
+
+                    .score {
+                        font-size: 1rem;
+                    }
+
+                    .score-counter {
+                        font-size: 1.2rem
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include FHDScreen {
+        .header-component {
+            height: 225px;
+
+            .header {
+                height: 175px;
+
+                .logo-icon {
+                    width: 125px;
+                }
+
+                .score-component {
+                    padding: 20px 25px;
+
+                    .score {
+                        font-size: 1.4rem;
+                    }
+
+                    .score-counter {
+                        font-size: 2.5rem
+                    }
+                }
+            }
+        }
+    }
+
+}

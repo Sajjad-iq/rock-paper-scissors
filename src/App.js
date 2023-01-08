@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { HEADER } from "./layout/header";
+import { Home } from "./pages/home";
+import { WINNER_SCREEN } from "./pages/WinnerScreen";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import { Roles } from "./pages/Rules";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="App">
+      <BrowserRouter>
+        <section className="app-wrapper">
+
+          <HEADER />
+          <Routes>
+            <Route path="/rock-paper-scissors/" element={<Roles />} />
+            <Route path="/WINNER" element={<WINNER_SCREEN />} />
+            <Route path="/Home" element={<Home />} />
+          </Routes>
+          <Link to={"/rock-paper-scissors/"} className="roles-btn">RULES</Link>
+        </section>
+      </BrowserRouter>
+    </section>
   );
 }
 
